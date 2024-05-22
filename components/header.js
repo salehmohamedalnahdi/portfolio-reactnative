@@ -1,7 +1,9 @@
-import {Text, TouchableOpacity, View } from 'react-native';
+import {Text, TouchableOpacity, View,Button } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
 import React, { useState } from 'react';
 import Collapsible from 'react-native-collapsible';
+import HomeScreen2 from '../screens/homeScreen2';
+
 
 
 
@@ -19,17 +21,16 @@ const [isCollapsed, setIsCollapsed] = useState(true);
         <Text style={tw `bg-blue-500 text-white font-bold `}>Menu</Text>
       </TouchableOpacity>
         <Collapsible  style={tw `bg-blue-200`} collapsed={isCollapsed}>
-          <TouchableOpacity><Text style={tw ` px-4 py-2  font-bold  `}>Home</Text></TouchableOpacity>
-          <TouchableOpacity><Text style={tw ` px-4 py-2  font-bold  `}>About</Text></TouchableOpacity>
-          <TouchableOpacity><Text style={tw ` px-4 py-2  font-bold  `}>Create</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={styles.header_text}>Home</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={styles.header_text}>About</Text></TouchableOpacity>
+          <TouchableOpacity><Text style={styles.header_text}>Create</Text></TouchableOpacity>
           </Collapsible>
       </View>
         <View style={tw `ml-2`} >
           <Text style={tw ` px-4 py-2 text-white font-bold text-base `} >Welcome To Portfolio</Text>
          
         </View>
-            
-      
     </View>
   )
 }
+const styles={header_text:tw ` px-4 py-2  font-bold  `}
