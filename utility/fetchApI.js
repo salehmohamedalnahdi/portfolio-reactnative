@@ -1,15 +1,13 @@
 import React from 'react';
-import {Text, View } from 'react-native';
-import tw from 'tailwind-react-native-classnames';
 import { useState,useEffect } from "react";
 
 export default function FetchAPI(){
-  const [data,setData]=useState()
+  const [data,setData]=useState([])
   useEffect(()=>{
     fetchData()
   },[])
   const fetchData = async () => {
-    const response= await fetch('https://jsonplaceholder.typicode.com/posts');
+    const response= await fetch('https://personal-portfolio-backend-9t80.onrender.com/users');
   if(!response.ok){
     throw Error("could not fetch data for that resource")
        }

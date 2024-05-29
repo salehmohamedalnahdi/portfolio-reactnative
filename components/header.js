@@ -1,8 +1,7 @@
-import {Text, TouchableOpacity, View,Button } from 'react-native';
+import {Text, TouchableOpacity, View } from 'react-native';
 import tw from 'tailwind-react-native-classnames';
 import React, { useState } from 'react';
 import Collapsible from 'react-native-collapsible';
-import HomeScreen2 from '../screens/homeScreen2';
 
 
 
